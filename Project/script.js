@@ -23,7 +23,13 @@ const winner = () =>{
             document.querySelector('.info').innerText = boxtexts[a[2]].innerText + " Won";
             gameover = true;
         }
+        // if(gameover){
+        // document.querySelector('.info').innerText = "Draw";
+        // gameover = true;
+    // }
     })
+
+    // 
 }
 
 // Main function
@@ -38,8 +44,22 @@ Array.from(boxes).forEach(element =>{
         text = changeTurn();
         winner();
         if(!gameover){
-            document.querySelector('.info').innerText= "Turn for" + text;
+            document.querySelector('.info').innerText= "Turn for " + text;
         }
         
     })
+});
+
+// Reset Button
+reset.addEventListener('click', (e) =>{
+    let boxtexts = document.querySelectorAll('.boxtext');
+    Array.from(boxtexts).forEach(element =>{
+        element.innerText = "";
+    });
+
+    text = "X";
+    gameover = false;
+    document.querySelector('.info').innerText= "Turn for" + text;
+
+
 });
