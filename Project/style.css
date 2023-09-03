@@ -2,10 +2,13 @@
     padding: 0;
     margin: 0;
 }
-
+body{
+    background-color: rgb(5, 5, 114);
+}
 nav {
     height: 100px;
     /* background-color: blue; */
+    box-shadow: 0 1px 10px 0 white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,7 +56,8 @@ nav {
 
 
 .box{
-    border: 1px solid black;
+    color: white;
+    border: 1px solid white;
     font-size: 4.5vw;
     display: flex;
     cursor: pointer;
@@ -66,12 +70,29 @@ nav {
 }
 
 #reset{
-    padding: 5px;
+    padding: 15px;
     border-radius: 4px;
     cursor: pointer;
+    font-size: medium;
+    margin-top: 10px;
     transition: all 0.2s ease-out;
 }
 
 #reset:hover{
     font-size: 100%;
+    color: white;
+    background-color: blue;
+}
+
+.infoContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+/* @media screen and (max-width:800px) {
+
+} */
+
+.info{
+    font-size: 2rem;
 }
